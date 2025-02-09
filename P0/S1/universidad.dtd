@@ -1,0 +1,27 @@
+
+<!DOCTYPE universidad SYSTEM "universidad.dtd">
+<universidad>
+    <escuela> 
+        <nombre> "ETSI Telecomunicación" </nombre>
+        <grado> 
+            <nombre> "Ingeniería en Sistemas Audiovisuales y Multimedia" </nombre>
+            <asignatura> "LTAW" </asignatura>
+            <asignatura> "CSAAI" </asignatura>
+            <asignatura> "ASA II" </asignatura>
+        </grado>
+
+        <grado> 
+            <nombre> "Ingeniería en Robótica Software" </nombre>
+            <asignatura> "AC" </asignatura>
+        </grado>
+    </escuela>
+</universidad>
+
+
+<!--
+
+b) 3 elementos contenedores: universidad, escuela, grado
+
+c) Hay 7 elementos terminales: "ETSI Telecomunicación", "Ingeniería en Sistemas Audiovisuales y Multimedia", "LTAW", "CSAII", "ASA II", "Ingenieria en robotica software", "AC"
+
+d) Hay 6 elementos nivel 3: Nombre, asignatura, asignatura, asignatura, nombre, asignatura
