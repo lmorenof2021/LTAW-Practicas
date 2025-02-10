@@ -1,20 +1,20 @@
 <!DOCTYPE generic SYSTEM "generic.dtd">
 <generic>
     <contenedor>  
-        <texto> Texto 5</texto>
+        Texto 5
         <contenedor>
             <contenedor>
                 <contenedor>
-                    <texto> texto 2</texto>
+                    texto 2
                     <contenedor>
-                        <texto>texto1 </texto>
+                        texto1 
                     </contenedor>
                 </contenedor>
             </contenedor>
 
-            <texto>texto 3 </texto>
+            texto 3 
             <contenedor>
-                <texto> texto 4 </texto>
+                texto 4 
             </contenedor>
         </contenedor>
     </contenedor>
