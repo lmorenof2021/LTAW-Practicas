@@ -57,6 +57,7 @@ const server = http.createServer((req, res) => {
         filePath = path.join(__dirname,  'css', 'styles.css');
     
         contentType = 'text/css';
+
     
     } else if (req.url === '/imagenes/producto1.jpg') {
     
@@ -76,6 +77,12 @@ const server = http.createServer((req, res) => {
     
         contentType = 'image/jpeg';
     
+
+    } else if (req.url === '/imagenes/favicon.png') {
+    
+        filePath = path.join(__dirname,  'imagenes', 'favicon.png');
+    
+        contentType = 'image/png';
     
     }
 
