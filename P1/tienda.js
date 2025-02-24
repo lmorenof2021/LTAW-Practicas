@@ -58,12 +58,6 @@ const server = http.createServer((req, res) => {
     
         contentType = 'text/css';
     
-    } else if (req.url === '/js/script.js') {
-    
-        filePath = path.join(__dirname,  'js', 'script.js');
-    
-        contentType = 'application/javascript';
-    
     } else if (req.url === '/imagenes/producto1.jpg') {
     
         filePath = path.join(__dirname,  'imagenes', 'producto1.jpg');
