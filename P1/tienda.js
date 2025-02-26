@@ -34,21 +34,27 @@ const server = http.createServer((req, res) => {
     
         contentType = 'text/html';
     
-    } else if (req.url === '/producto1') {
+    } else if (req.url === '/BillieEilish') {
     
         filePath = path.join(__dirname, 'producto1.html');
     
         contentType = 'text/html';
     
-    } else if (req.url === '/producto2') {
+    } else if (req.url === '/KendrickLamar') {
     
         filePath = path.join(__dirname, 'producto2.html');
     
         contentType = 'text/html';
     
-    } else if (req.url === '/producto3') {
+    } else if (req.url === '/TheWeeknd') {
     
         filePath = path.join(__dirname,  'producto3.html');
+    
+        contentType = 'text/html';
+
+    } else if (req.url === '/Rihanna') {
+    
+        filePath = path.join(__dirname,  'producto4.html');
     
         contentType = 'text/html';
     
@@ -77,6 +83,12 @@ const server = http.createServer((req, res) => {
     
         contentType = 'image/jpeg';
     
+    } else if (req.url === '/imagenes/producto4.jpg') {
+    
+        filePath = path.join(__dirname,  'imagenes', 'producto4.jpg');
+    
+        contentType = 'image/jpeg';
+    
 
     } else if (req.url === '/imagenes/favicon.png') {
     
@@ -85,10 +97,17 @@ const server = http.createServer((req, res) => {
         contentType = 'image/png';
     
     }
+    else {
+    
+        // Si el recurso no se encuentra, servir una página de error
+    
+        filePath = path.join(__dirname, 'pag_error.html');
+    
+        contentType = 'text/html';
+    
+    }
 
 
-    
-    
     
     serveFile(res, filePath, contentType);
 });

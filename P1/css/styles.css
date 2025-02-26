@@ -1,3 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+h1 {
+  color: hsla(0, 0%, 0%, .9);
+  /*font: normal 140px Varela Round, sans-serif;*/
+  font-size: 2.5em;
+  animation: move linear 4000ms infinite;  
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 hsla(180, 100%, 50%, 1), 
+      -3px -3px 0 hsla(180, 100%, 50%, 1), 
+      -2px -2px 0 hsla(180, 100%, 50%, 1), 
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 
+      3px 3px 0 hsla(0, 100%, 50%, 1), 
+      2px 2px 0 hsla(0, 100%, 50%, 1), 
+      1px 1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 hsla(0, 100%, 50%, 1), 
+      -3px 3px 0 hsla(0, 100%, 50%, 1), 
+      -2px 2px 0 hsla(0, 100%, 50%, 1), 
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      4px -4px 0 hsla(180, 100%, 50%, 1), 
+      3px -3px 0 hsla(180, 100%, 50%, 1), 
+      2px -2px 0 hsla(180, 100%, 50%, 1), 
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsla(180, 100%, 50%, 1), 
+      3px 3px 0 hsla(180, 100%, 50%, 1), 
+      2px 2px 0 hsla(180, 100%, 50%, 1), 
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -4px -4px 0 hsla(0, 100%, 50%, 1), 
+      -3px -3px 0 hsla(0, 100%, 50%, 1), 
+      -2px -2px 0 hsla(0, 100%, 50%, 1), 
+      -1px -1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }  
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +82,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #ddb771;
+    background-color: #e9d7b7;
     color: #333;
 }
 
@@ -19,8 +96,15 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
-}
+
+  font-family: 'Varela Round', sans-serif;
+
+  font-size: 2.5em;
+
+  color: hsla(0, 0%, 0%, .9);
+
+  animation: move linear 4000ms infinite;  
+} 
 
 main {
     padding: 20px;
@@ -31,17 +115,39 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
+    
+    
+
 }
 
 .producto {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 15px;
+
+    margin: 15px;
+
+    padding: 20px;
+
     width: 300px; 
+
     text-align: center;
+
+    border: 2px solid #ddd;  
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+
+}
+
+.producto:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 .producto img {
@@ -52,17 +158,28 @@ main {
 
 
 a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #5cb85c;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 10px 15px;
+
+  background: #6e9c5c;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: background 0.3s, transform 0.3s;
 }
 
 a:hover {
-    background: #4cae4c;
+    background: #668366;
+    transform: scale(1.05);
 }
 
 
@@ -76,7 +193,7 @@ footer {
     width: 100%;
 }
 
-.producto-detalle {
+.producto_detalle {
 
     text-align: center;
 
@@ -85,7 +202,7 @@ footer {
 }
 
 
-.producto-detalle img {
+.producto_detalle img {
 
     max-width: 50%; 
 
