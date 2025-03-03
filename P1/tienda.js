@@ -5,7 +5,7 @@ const path = require('path');
 const PORT = 8001;
 
 //leer archivo y manejar errores
-const serveFile = (res, filePath, contentType) => {
+const serverFile = (res, filePath, contentType) => {
     fs.readFile(filePath, (err, content) => {
         if (err) {
             console.error('Error al leer el archivo:', err);
@@ -109,7 +109,7 @@ const server = http.createServer((req, res) => {
 
 
     
-    serveFile(res, filePath, contentType);
+    serverFile(res, filePath, contentType);
 });
 
 // Iniciar el servidor
