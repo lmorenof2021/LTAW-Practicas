@@ -1,53 +1,52 @@
 {
-    "usuarios": [
-        {
-            "usuario": "usuario 1",
-            "nombre": "nombre 1"
-        },
-        {
-            "usuario": "usuario 2",
-            "nombre": "nombre 2"
-        },
-        {
-            "usuario": "usuario 3",
-            "nombre": "nombre 3"
-        }
-    ],
-    "productos" : [
-        {
-            "nombre": "Poster Billie Eilish",
-            "unidades": "13",
-            "precio": 15
-        },
-        {
-            "nombre": "Poster The Weeknd",
-            "unidades": "10",
-            "precio": 15
-        },
-        {
-            "nombre": "Poster Kendrick Lamar",
-            "unidades": "7",
-            "precio": 15
-        },
-        {
-            "nombre": "Poster Rihanna",
-            "unidades": "3",
-            "precio": 15
-        }
-    ],
-    "pedidos pendientes": [
-        {
-            "usuario": "usuario 2",
-            "direccion": "dirección",
-            "tarjeta": "num tarjeta",
-            "pedido": "Poster Rihanna"
-        },
-        {
-            "usuario": "usuario 3",
-            "direccion": "dirección",
-            "tarjeta": "num tarjeta",
-            "pedido": "Poster Billie Eilish"
-        }
-    ]
-
+  "usuarios": [
+    {
+      "usuario": "usuario 1",
+      "nombre": "nombre 1"
+    },
+    {
+      "usuario": "usuario 2",
+      "nombre": "nombre 2"
+    },
+    {
+      "usuario": "usuario 3",
+      "nombre": "nombre 3"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Poster Billie Eilish",
+      "unidades": 17,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster The Weeknd",
+      "unidades": 14,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster Kendrick Lamar",
+      "unidades": 11,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster Rihanna",
+      "unidades": 7,
+      "precio": 15
+    }
+  ],
+  "pedidos pendientes": [
+    {
+      "usuario": "usuario 2",
+      "direccion": "dirección",
+      "tarjeta": "num tarjeta",
+      "pedido": "Poster Rihanna"
+    },
+    {
+      "usuario": "usuario 3",
+      "direccion": "dirección",
+      "tarjeta": "num tarjeta",
+      "pedido": "Poster Billie Eilish"
+    }
+  ]
 }
