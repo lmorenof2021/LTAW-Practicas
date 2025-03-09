@@ -16,21 +16,23 @@
 
 
  <!-- 
- a) sirve para indicar el fichero donde está la definición del lenguaje usado (en este caso urjc_ML)
+ a) etiqueta especial que sirve para indicar el tipo de documentto. fichero donde está la definición del lenguaje usado (en este caso urjc_ML). La definición de este documento se encuentra en el fichero local urjc_ml.dtd. El programa que haga el procesado de este documento deberá abrir primero el documento de la definición para saber qué etiquetas son válidas y poder así validar el documento o encontrar errores en su sintáxis
 
- b) Si omitimos esta línea no estaremos deficniendo el lenguaje usado ni el fichero en el que se está definiendo
+ b) Si omitimos esta línea no estaremos deficniendo el lenguaje usado ni el fichero en el que se está definiendo. no sabrá de que tipo de documento se trata. dara un error
 
- c) Sí, ya que comienza con la primera línea que es necesaria y luego abre con el lenguaje usado <urjc_ml> y lo cierra al final. Tambien abre y cierra las demás etiquetas correctamente
+ c) No lo sabriamos, podrian estar mal definidas. vemos que sintacticamente es correcto pero no sabemos si es valido o no
 
  d) Es un comentario
 
  e) De apertura hay las mismas que de cierre. En total son 9 de apertura y 9 de cierre.
 
- f)  urjc_ml
+ f)  
+ ----------------------------------------------------------
+ urjc_ml
       |
-      |
+      |-----------------------
       campus
-         |
+         |-------------
          |-nombre
          |- escuela
                |
