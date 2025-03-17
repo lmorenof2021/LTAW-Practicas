@@ -1,0 +1,52 @@
+{
+  "usuarios": [
+    {
+      "usuario": "lmf",
+      "nombre": "lebron"
+    },
+    {
+      "usuario": "usuario 2",
+      "nombre": "nombre 2"
+    },
+    {
+      "usuario": "usuario 3",
+      "nombre": "nombre 3"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Poster Billie Eilish",
+      "unidades": 19,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster The Weeknd",
+      "unidades": 16,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster Kendrick Lamar",
+      "unidades": 13,
+      "precio": 15
+    },
+    {
+      "nombre": "Poster Rihanna",
+      "unidades": 9,
+      "precio": 15
+    }
+  ],
+  "pedidos pendientes": [
+    {
+      "usuario": "usuario 2",
+      "direccion": "dirección",
+      "tarjeta": "num tarjeta",
+      "pedido": "Poster Rihanna"
+    },
+    {
+      "usuario": "usuario 3",
+      "direccion": "dirección",
+      "tarjeta": "num tarjeta",
+      "pedido": "Poster Billie Eilish"
+    }
+  ]
+}
