@@ -5,12 +5,12 @@
       "nombre": "lebron"
     },
     {
-      "usuario": "usuario 2",
-      "nombre": "nombre 2"
+      "usuario": "usuario2",
+      "nombre": "nombre2"
     },
     {
-      "usuario": "usuario 3",
-      "nombre": "nombre 3"
+      "usuario": "usuario3",
+      "nombre": "nombre3"
     }
   ],
   "productos": [
@@ -37,13 +37,13 @@
   ],
   "pedidos pendientes": [
     {
-      "usuario": "usuario 2",
+      "usuario": "usuario2",
       "direccion": "dirección",
       "tarjeta": "num tarjeta",
       "pedido": "Poster Rihanna"
     },
     {
-      "usuario": "usuario 3",
+      "usuario": "usuario3",
       "direccion": "dirección",
       "tarjeta": "num tarjeta",
       "pedido": "Poster Billie Eilish"
