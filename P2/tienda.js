@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const url= require('url');
 
 const PORT = 8001;
 
@@ -19,9 +20,24 @@ const serverFile = (res, filePath, contentType) => {
 };
 
 
+
+// Nombre del fichero JSON a leer
+const FICHERO_JSON = "tienda.json";
+
+// Leer el fichero JSON
+const tienda_json = fs.readFileSync(FICHERO_JSON, 'utf8');
+
+// Crear la estructura tienda a partir del contenido del fichero
+const tienda = JSON.parse(tienda_json);
+const usuarios = tienda.usuarios;
+
+const RESPUESTA = fs.readFileSync('index.html', 'utf-8');
+
 // Crear el servidor
 const server = http.createServer((req, res) => {
     console.log(`Solicitud recibida para: ${req.url}`);
+
+ 
 
 // Manejo de rutas
     let filePath = ''; //almacena la ruta del archivo
@@ -96,12 +112,17 @@ const server = http.createServer((req, res) => {
         contentType = 'image/png';
     
     } else if (req.url === '/login') {
-    
+        // Obtener el nombre de usuario desde la URL (parámetro GET)
+        const myURL = new URL(req.url, 'http://' + req.headers['host']);
         filePath = path.join(__dirname, 'login.html');
-    
         contentType = 'text/html';
+
+        let username = myURL.searchParams.get('username');  
+        console.log("Usuario recibido: " + username);
+
     }
 
+  
     else {
     
         // Si el recurso no se encuentra, servir una página de error
@@ -111,22 +132,11 @@ const server = http.createServer((req, res) => {
         contentType = 'text/html';
     
     }
-
-
-    
+  
     serverFile(res, filePath, contentType);
 });
 
 
-// Nombre del fichero JSON a leer
-const FICHERO_JSON = "tienda.json";
-
-// Leer el fichero JSON
-const tienda_json = fs.readFileSync(FICHERO_JSON, 'utf8');
-
-// Crear la estructura tienda a partir del contenido del fichero
-const tienda = JSON.parse(tienda_json);
-const usuarios = tienda.usuarios;
 
 
 
