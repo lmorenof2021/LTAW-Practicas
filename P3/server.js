@@ -43,6 +43,7 @@ io.on('connect', (socket) => {
 
   socket.on("message", (msg) => {
     console.log("Mensaje Recibido!: ".blue + msg);
+    io.send(msg)
   });
 
 //-- Evento de desconexión
