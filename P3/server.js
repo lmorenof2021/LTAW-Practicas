@@ -39,11 +39,33 @@ io.on('connect', (socket) => {
   console.log('** NUEVA CONEXIÓN **'.yellow);
 
   socket.send('Inicio del chat');
+  socket.send('El usuario se acaba de conectar al chat')
  
 
   socket.on("message", (msg) => {
     console.log("Mensaje Recibido!: ".blue + msg);
-    io.send(msg)
+
+    if (msg.startsWith('/')) {
+        let mensajeRespuesta = '';
+        const comando = msg;
+      
+        if (comando === '/help') {
+          mensajeRespuesta = 'Comandos disponibles: /help, /list, /hello, /date';
+        } else if (comando === '/list') {
+          mensajeRespuesta = `Número de usuarios conectados: ${usuariosConectados}`;
+        } else if (comando === '/hello') {
+          mensajeRespuesta = 'El servidor te envía saludos!!';
+        } else if (comando === '/date') {
+          mensajeRespuesta = `Fecha y hora actuales: ${new Date().toLocaleString()}`;
+        } else {
+          mensajeRespuesta = 'Comando incorrecto. Escribe /help para ver los comandos disponibles.';
+        }
+        //Solo se envía al servidor
+        socket.send(mensajeRespuesta);
+      } else {
+        //Si no es un comando, se envía a todos
+        io.send(msg);
+      }
   });
 
 //-- Evento de desconexión
@@ -57,6 +79,5 @@ io.on('connect', (socket) => {
 
 
 //-- Lanzar el servidor HTTP
-//-- ¡Que empiecen los juegos de los WebSockets!
 server.listen(PUERTO);
 console.log("Escuchando en puerto: " + PUERTO);
