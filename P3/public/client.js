@@ -9,6 +9,9 @@ const socket = io();
 //-- Mostrar los mensajes recibidos
 socket.on("message", (msg) => {
   display.innerHTML += '<p style="color:blue">' + msg + '</p>';
+  //Para que vayan bajando los mensajes
+  display.scrollTop = display.scrollHeight;
+
 });
 
 //-- Al apretar el botón se envía un mensaje al servidor
