@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
   <title>Chat</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="server.js" defer></script>
+  <script src="index.js" defer></script>
 </head>
 <body>
   <div id="chat">
@@ -16,6 +16,18 @@
     <div id="typingIndicator" style="display: none;">Usuario escribiendo...</div>
     <input id="msg_entry" placeholder="Enviar mensaje"/>
   </div>
+  <hr>
+    <h2>Información:</h2>
+    <ul>
+        <li>Versión node: <span id="info1" class="blue"></span> </li>
+        <li>Versión chrome: <span id="info2" class="blue"></span></li>
+        <li>Versión electron: <span id="info3" class="blue"></span></li>
+        <li>Ip: <span id="info4" class="blue"></span></li>
+
+    </ul>
+    <hr>
+    <p>   <input type="button" value="Test" id="btn_test"> </p>
+   <p>Display:</p>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>

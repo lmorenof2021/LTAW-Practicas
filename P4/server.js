@@ -5,17 +5,9 @@ const express = require('express');
 const colors = require('colors');
 //-- Cargar el módulo de electron
 const electron = require('electron');
+const ip = require('ip');  
 
-const ip = require('ip');
 
-console.log("Arrancando electron...");
-
-//-- Obtener información del sistema
-console.log("Información del sistema:");
-console.log("Versión de Node.js: ", process.versions.node);
-console.log("Versión de Chrome: ", process.versions.chrome);
-console.log("Versión de Electron: ", process.versions.electron);
-console.log("Dirección IP: ", ip.address());
 
 const PUERTO = 8080;
 
@@ -94,6 +86,7 @@ io.on('connect', (socket) => {
   });
 });
 
+
 //-- Variable para acceder a la ventana principal
 //-- Se pone aquí para que sea global al módulo principal
 let win = null;
@@ -106,13 +99,19 @@ electron.app.on('ready', () => {
     //-- Crear la ventana principal de nuestra aplicación
     win = new electron.BrowserWindow({
         width: 600,  //-- Anchura 
-        height: 400  //-- Altura
+        height: 400,  //-- Altura
+        webPreferences: {
+          nodeIntegration: true,
+          contextIsolation: false
+      }
     });
-
+    win.loadFile('public/index.html'); 
+    win.on('ready-to-show', () => {
+      console.log("HOLA?");
+      win.webContents.send('print', "MENSAJE ENVIADO DESDE PROCESO MAIN");
+    });
+    
 });
-
-
-
 
 
 //-- Lanzar el servidor HTTP
