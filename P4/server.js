@@ -6,7 +6,16 @@ const colors = require('colors');
 //-- Cargar el módulo de electron
 const electron = require('electron');
 
+const ip = require('ip');
+
 console.log("Arrancando electron...");
+
+//-- Obtener información del sistema
+console.log("Información del sistema:");
+console.log("Versión de Node.js: ", process.versions.node);
+console.log("Versión de Chrome: ", process.versions.chrome);
+console.log("Versión de Electron: ", process.versions.electron);
+console.log("Dirección IP: ", ip.address());
 
 const PUERTO = 8080;
 
@@ -101,6 +110,9 @@ electron.app.on('ready', () => {
     });
 
 });
+
+
+
 
 
 //-- Lanzar el servidor HTTP
