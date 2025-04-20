@@ -5,7 +5,7 @@ console.log("Hola desde el proceso de la web...");
 
 //-- Obtener elementos de la interfaz
 const btn_test = document.getElementById("btn_test");
-const display = document.getElementById("display");
+const display_info = document.getElementById("display");
 const info1 = document.getElementById("info1");
 const info2 = document.getElementById("info2");
 const info3 = document.getElementById("info3");
@@ -21,7 +21,7 @@ info4.textContent = ip.address();
 
 
 btn_test.onclick = () => {
-    display.innerHTML += "TEST! ";
+    display_info.innerHTML += "TEST! ";
     console.log("Botón apretado!");
 }
 
